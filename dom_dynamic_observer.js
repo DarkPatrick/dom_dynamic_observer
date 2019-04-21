@@ -9,6 +9,7 @@ const SELECTORS = {
 };
 
 var events_map = {};
+var functions_to_call = [];
 
 
 function control_new_object_listener() {
@@ -145,6 +146,9 @@ function add_object_listener() {
 }
 
 function dom_observer_function() {
+    for (let i = 0; i < functions_to_call.length) {
+        functions_to_call[i]();
+    }
     //dom_observer.disconnect();
 }
 
