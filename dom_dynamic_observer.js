@@ -146,7 +146,7 @@ function add_object_listener() {
 }
 
 function dom_observer_function() {
-    for (let i = 0; i < functions_to_call.length) {
+    for (let i = 0; i < functions_to_call.length; ++i) {
         functions_to_call[i]();
     }
     //dom_observer.disconnect();
